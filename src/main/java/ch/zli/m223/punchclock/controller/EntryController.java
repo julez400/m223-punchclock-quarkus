@@ -53,6 +53,6 @@ public class EntryController {
     public Entry update(Entry entry) {
         return entryService.update(entry);
     }
-
+    
 
 }

@@ -61,7 +61,7 @@ const updateEntry = (entry) => {
 
 // Rendering
 const resetForm = () => {
-    const entryForm = document.querySelector('#entryForm');
+    const entryForm = document.querySelector('#createEntryForm');
     entryForm.reset();
     mode = 'create';
     currentEntry = null;
@@ -87,7 +87,7 @@ const editEntry = (entry) => {
     mode = 'edit';
     currentEntry = entry;
 
-    const entryForm = document.querySelector('#entryForm');
+    const entryForm = document.querySelector('#createEntryForm');
     const checkInDateField = entryForm.querySelector('[name="checkInDate"]');
     checkInDateField.value = entry.checkIn.split('T')[0];
     const checkInTimeField = entryForm.querySelector('[name="checkInTime"]');
