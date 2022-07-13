@@ -45,7 +45,7 @@ const deleteEntry = (id) => {
 };
 
 const updateEntry = (entry) => {
-    fetch(`${URL}/entries/${entry.id}`, {
+    fetch(`${URL}/entries/`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json'
@@ -64,7 +64,7 @@ const resetForm = () => {
     const entryForm = document.querySelector('#createEntryForm');
     entryForm.reset();
     mode = 'create';
-    currentEntry = null;
+    currentEntry = null;s
 }
 
 const saveForm = (e) => {
@@ -126,7 +126,7 @@ const renderEntries = () => {
     display.innerHTML = '';
     entries.forEach((entry) => {
         const row = document.createElement('tr');
-        row.appendChild(createCell(entry.id));
+        row.appendChild(createCell(entry.id))
         row.appendChild(createCell(new Date(entry.checkIn).toLocaleString()));
         row.appendChild(createCell(new Date(entry.checkOut).toLocaleString()));
         row.appendChild(createActions(entry));
