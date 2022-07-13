@@ -126,7 +126,7 @@ const renderEntries = () => {
     display.innerHTML = '';
     entries.forEach((entry) => {
         const row = document.createElement('tr');
-        row.appendChild(createCell(entry.id))
+        row.appendChild(createCell(entry.id));
         row.appendChild(createCell(new Date(entry.checkIn).toLocaleString()));
         row.appendChild(createCell(new Date(entry.checkOut).toLocaleString()));
         row.appendChild(createActions(entry));
