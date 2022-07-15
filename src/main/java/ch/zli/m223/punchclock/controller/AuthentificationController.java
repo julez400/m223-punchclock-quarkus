@@ -20,6 +20,11 @@ public class AuthentificationController {
     @Inject
     AuthenticationService authenticationService; 
 
+    /**
+     * 
+     * @param user
+     * @return
+     */
     @POST
     @Path("/login")
     @Consumes(MediaType.APPLICATION_JSON)
