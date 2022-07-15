@@ -64,7 +64,7 @@ const resetForm = () => {
     const entryForm = document.querySelector('#createEntryForm');
     entryForm.reset();
     mode = 'create';
-    currentEntry = null;s
+    currentEntry = null;
 }
 
 const saveForm = (e) => {

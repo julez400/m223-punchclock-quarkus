@@ -9,6 +9,7 @@ Folgende Schritte sind notwendig um die Applikation zu erstellen und zu starten:
 ```shell script
 ./mvnw compile quarkus:dev
 ```
+Danach "http://localhost:8080" im Browser Eingeben.
 
 Folgende Dienste stehen während der Ausführung im Profil dev zur Verfügung:
 
@@ -19,3 +20,11 @@ Datenquelle: jdbc:h2:mem:punchclock
 Benutzername: zli
 Passwort: zli
 
+
+In dieser Applikation kann sich ein Arbeiter anmelden und sein Stunden eintragen. Seine Eingetragenen Stunden kann er dann löschen oder bearbeiten.
+Angaben fürs Anmelden:
+Admin username: «admin»
+Admin password: «root»
+
+User username: «worker»
+User password: «1234»

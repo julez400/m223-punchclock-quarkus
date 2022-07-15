@@ -23,6 +23,10 @@ public class UserController {
     @Inject
     UserService userService;
 
+    /**
+     * Creates a list with Users
+     * @return returns the list with Users
+     */
     @GET
     @PermitAll
     @Produces(MediaType.APPLICATION_JSON)
@@ -31,6 +35,11 @@ public class UserController {
         return userService.list();
     }
 
+    /**
+     * Adds a User
+     * @param user the new User
+     * @return the added User
+     */
     @POST
     @PermitAll
     @Produces(MediaType.APPLICATION_JSON)
