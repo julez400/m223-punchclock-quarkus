@@ -15,22 +15,23 @@ import ch.zli.m223.punchclock.domain.User;
 
 @RequestScoped
 public class AuthenticationService {
-
-    private EntityManager entityManager;
     
     @Inject
+    private EntityManager entityManager;
+    
+    
     public boolean checkIfUserExists(User user){        
-    var query = entityManager.createQuery("SELECT COUNT(*) FROM User WHERE username = :name AND password = :password");        
-    query.setParameter("name", user.getUsername());
-    query.setParameter("password", user.getPassword());
-    var result = query.getSingleResult();
+        var query = entityManager.createQuery("SELECT COUNT(*) FROM User WHERE username = :name AND password = :password");        
+        query.setParameter("name", user.getUsername());
+        query.setParameter("password", user.getPassword());
+        var result = query.getSingleResult();
 
-    if((long)result == 1) 
-    {
-        return true;
+        if((long)result == 1) 
+        {
+            return true;
+        }
+        return false;
     }
-    return false;
-}
     
     public String GenerateValidJwtToken(String username){
         String token =

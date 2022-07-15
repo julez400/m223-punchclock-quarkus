@@ -1,7 +1,6 @@
 package ch.zli.m223.punchclock.controller;
 
 import java.util.List;
-
 import javax.inject.Inject;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
