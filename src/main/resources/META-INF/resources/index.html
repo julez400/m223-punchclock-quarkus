@@ -7,32 +7,23 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Punchclock Client</title>
         <link rel="stylesheet" type="text/css" href="style.css" />
-        <script src="script.js" type="application/javascript"></script>
+        <script src="" type="application/javascript"></script>
     </head>
     <body>
-        <form id="createEntryForm">
-            <label for="checkIn">Check in</label>
-            <input type="date" name="checkInDate" id="checkIn" required>
-            <input type="time" name="checkInTime" required>
-            <label for="checkOut">Check out</label>
-            <input type="date" name="checkOutDate" id="checkOut" required>
-            <input type="time" name="checkOutTime" required>
-            <input type="submit" value="Save" />
-        </form>
-        <table>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Check in</th>
-                    <th>Check out</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody id="entryDisplay">
-                <tr>
-                    <td colspan="3">Loading...</td>
-                </tr>
-            </tbody>
-        </table>
+        <form action="action_page.php" method="post">
+            <div class="container">
+              <label for="uname"><b>Username</b></label>
+              <input type="text" placeholder="Enter Username" name="uname" required>
+          
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required>
+          
+              <button type="submit">Login</button>
+            </div>
+          
+            <div class="container">
+              <button type="button" class="signup">Sign Up</button>
+            </div>
+          </form> 
     </body>
 </html>
